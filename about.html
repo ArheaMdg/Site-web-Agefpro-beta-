@@ -471,6 +471,92 @@ button:hover{
 	cursor: pointer;
 }
 		</style>
+	<style>
+	*
+	box-sizing: border-box
+
+body, html
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	background: white
+
+.wrapper
+	display: flex
+	width: 90%
+	justify-content: space-around
+align-items: center
+	justify-content: center
+
+.card
+	width: 280px
+	height: 360px
+	border-radius: 15px
+	padding: 1.5rem
+	background: white
+	position: relative
+	display: flex
+	align-items: flex-end
+	transition: 0.4s ease-out
+	box-shadow: 0px 7px 10px rgba(black, 0.5)
+	&:hover
+		transform: translateY(20px)
+		&:before
+			opacity: 1
+		.info
+			opacity: 1
+			transform: translateY(0px)
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 15px
+		background: rgba(black, 0.6)
+		z-index: 2
+		transition: 0.5s
+		opacity: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+		border-radius: 15px
+
+	.info
+		position: relative
+		z-index: 3
+		color: white
+		opacity: 0
+		transform: translateY(30px)
+		transition: 0.5s
+		h1
+			margin: 0px
+		p
+			letter-spacing: 1px
+			font-size: 15px
+			margin-top: 8px
+		button
+			padding: 0.6rem
+			outline: none
+			border: none
+			border-radius: 3px
+			background: white
+			color: black
+			font-weight: bold
+			cursor: pointer
+			transition: 0.4s ease
+			&:hover
+				background: dodgerblue
+				color: white
+	</style>	
 </head>
 <body>
     <!-- Spinner Start -->
@@ -559,14 +645,32 @@ button:hover{
 		<br><br><br><br><br><br><br><br><br>
 		</div>
 </header>
-
-		<div class="breadcumb-wrapper breadcumb-layout1 pt-175 pb-125 bg-black" data-overlay="dark" data-opacity="6">
-			<div class="container z-index-common">
-			<div class="breadcumb-content"><h1 class="breadcumb-title sec-title text-white">
-				<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">À propos de nous</font></font></h1>
-				<ul class="breadcumb-menu text-white pt-1"><li><a href="https://wordpress.vecurosoft.com/techbiz">
-					<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maison</font></font></a></li><li><font style="vertical-align: inherit;">
-					<font style="vertical-align: inherit;">À propos de nous</font></font></li></ul></div></div></div>
+<div class="wrapper">
+    <div class="card">
+        <img src="https://i.ibb.co/tXw8df4/solution01.png" alt="Solution Materiels">
+        <div class="info">
+            <h1>Solution Materiels</h1>
+            <p>Des matériels de qualité aux justes prix !</p>
+            <button>En savoir plus</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://i.ibb.co/QQ6PFP6/2.png" alt="Solution Logiciels">
+        <div class="info">
+            <h1>Solution Logiciels</h1>
+            <p>Dites adieu aux abonnements avec notre licence unique illimitée et restez à l'écoute pour découvrir nos prochaines avancées sectorielles.</p>
+            <button>En savoir plus</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://i.ibb.co/XbZx3dD/formation3.png" alt="Formation">
+        <div class="info">
+            <h1>Formation</h1>
+            <p>Formation sur mesure pour Cadres et Dirigeants, optimisez vos compétences sur les logiciels SAGE Ligne 100</p>
+            <button>En savoir plus</button>
+        </div>
+    </div>
+</div>
   <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
